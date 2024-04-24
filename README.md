@@ -1,3 +1,6 @@
+![scales_banner](https://github.com/WardenPotato/Scales/assets/35919125/3e38592d-a073-44ac-9274-e37d0219e026)
+
+
 # Scales!
 An advanced GMod entity resizing library and STool.
 
