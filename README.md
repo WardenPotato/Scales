@@ -22,7 +22,7 @@ On sandbox the functionality for: Cleanup, SaveRestore, Duplicator and Undo. Is 
 This autoloading functionality is not present on gamemodes that arent sandbox derived.
 
 ## Convars on sandbox
-On sandbox the following convars are registered to prevent abuse of the STool, this doesnt not effect the API functions.
+On sandbox the following convars are registered to prevent abuse of the STool, this does not effect the API functions.
 
 `scales_clamp`: Force the Entity Resizer to clamp its values. (Default: on)
 
