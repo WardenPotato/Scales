@@ -3,7 +3,7 @@
 
 AddCSLuaFile()
 
-local version = 1.0
+local version = 1.1
 MsgN("Loading Scales: " .. version)
 
 --Global definitions we're gonna import into this module

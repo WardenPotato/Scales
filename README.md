@@ -26,7 +26,9 @@ On sandbox the following convars are registered to prevent abuse of the STool, t
 
 `scales_clamp`: Force the Entity Resizer to clamp its values. (Default: on)
 
-`scales_convexvertexlimit`:"Impose vertex limit to prevent lag. (Default: 500)
+`scales_convexvertexlimit`: Impose vertex limit to prevent lag. (Default: 500)
+
+`scales_propsonly`: Only allow the tool to be used on prop_physics. (Default: on)
 
 ## API Functions
 These API functions are available under `scales.` after the module has loaded.

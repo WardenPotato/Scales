@@ -20,6 +20,7 @@ TOOL.ClientConVar["disable_client_physics"] = "0"
 if SERVER then
 	local scales_clamp = CreateConVar(COMMAND_PREFIX .. "_clamp", "1", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Force the Entity Resizer to clamp its values.")
 	local scales_vertexlimit = CreateConVar(COMMAND_PREFIX .. "_convexvertexlimit", "500", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Impose vertex limit to prevent lag.")
+	local scales_propsonly = CreateConVar(COMMAND_PREFIX .. "_propsonly", "1", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Only allow the tool to be used on prop_physics.")
 
 	local function IsValidEntity(ent)
 		return isentity(ent) and ent:IsValid()
@@ -34,7 +35,7 @@ if SERVER then
 		local ent = Trace.Entity
 
 		if (not IsValidEntity(ent)) then return false end
-		if (ent:GetClass() ~= "prop_physics") then return false end
+		if (scales_propsonly:GetBool() and ent:GetClass() ~= "prop_physics") then return false end
 
 		local server_physical_scale = Vector(self:GetClientNumber("server_physical_scale_x"), self:GetClientNumber("server_physical_scale_y"), self:GetClientNumber("server_physical_scale_z"))
 		local client_visual_scale = Vector(self:GetClientNumber("client_visual_scale_x"), self:GetClientNumber("client_visual_scale_y"), self:GetClientNumber("client_visual_scale_z"))
