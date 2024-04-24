@@ -15,6 +15,8 @@ The library focuses on developers and server owners mainly that want to use this
 Installation is straightforward and simple, you can directly clone this repo into your addons folder or only use the module file if you dont care about the STool.
 Keep in mind to use a lowercase folder name if youre using this on linux.
 
+The module can be loaded using `require("scales")`.
+
 ## Autoregistration on sandbox
 On sandbox the functionality for: Cleanup, SaveRestore, Duplicator and Undo. Is automatically registered, this can be disabled by calling `scales.SetShouldAutoRegisterOnSandbox(false)` before the STool loads.
 This autoloading functionality is not present on gamemodes that arent sandbox derived.
@@ -27,6 +29,8 @@ On sandbox the following convars are registered to prevent abuse of the STool, t
 `scales_convexvertexlimit`:"Impose vertex limit to prevent lag. (Default: 500)
 
 ## API Functions
+These API functions are available under `scales.` after the module has loaded.
+
 ```lua
 --Scale an entity. by default this: has no vertex_limit, does clamping, doesnt preserve constraint locations.
 --Arguments: Entity, Vector
