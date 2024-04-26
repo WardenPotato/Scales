@@ -46,7 +46,7 @@ if SERVER then
 		local msg_callback = function(msg) self:GetOwner():ChatPrint(msg) end
 		local vertex_limit = scales_vertexlimit:GetInt()
 
-		return scales.Scale(ent, server_physical_scale, client_visual_scale, scale_visual_with_physical, disable_client_physics, clamp, preserve_constraint_locations, msg_callback, vertex_limit)
+		return scales.ScaleEx(ent, server_physical_scale, client_visual_scale, scale_visual_with_physical, disable_client_physics, clamp, preserve_constraint_locations, msg_callback, vertex_limit)
 	end
 
 	function TOOL:RightClick(Trace)
